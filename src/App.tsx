@@ -86,7 +86,7 @@ const copy = {
       intro:
         'My scientific initiation at IFSP investigates a hybrid architecture for web threat detection using server logs, SIEM correlation and unsupervised machine learning.',
       publicationTitle:
-        'Análise Preditiva de Vulnerabilidades em Aplicações Web Usando Logs de Servidor: Uma Arquitetura Híbrida',
+        'Predictive Analysis of Vulnerabilities in Web Applications Using Server Logs: A Hybrid Architecture',
       publicationText:
         'Validated on 170,366 CIC-IDS2017 requests and presented at ERMAC Regional 8 at INPE, São José dos Campos.',
       read: 'Read publication',
@@ -199,7 +199,7 @@ const copy = {
       intro:
         'Minha iniciação científica no IFSP investiga uma arquitetura híbrida para detecção de ameaças web utilizando logs de servidor, correlação com SIEM e machine learning não supervisionado.',
       publicationTitle:
-        'Predictive Analysis of Vulnerabilities in Web Applications Using Server Logs: A Hybrid Architecture',
+        'Análise Preditiva de Vulnerabilidades em Aplicações Web Usando Logs de Servidor: Uma Arquitetura Híbrida',
       publicationText:
         'Validado em 170.366 requisições do CIC-IDS2017 e apresentado no ERMAC Regional 8, no INPE, em São José dos Campos.',
       read: 'Ler publicação',
