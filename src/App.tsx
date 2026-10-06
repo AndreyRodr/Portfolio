@@ -44,7 +44,7 @@ const copy = {
       educationText: 'Final semester',
       researchTitle: 'Cybersecurity Research',
       researchText: 'Aegis scientific initiation',
-      opportunityTitle: 'Open to Junior Opportunities',
+      opportunityTitle: 'Open to Opportunities',
       opportunityText: 'Software development & cybersecurity',
     },
     work: {
@@ -131,7 +131,7 @@ const copy = {
       educationText: 'Último semestre',
       researchTitle: 'Pesquisa em Cibersegurança',
       researchText: 'Iniciação científica — Aegis',
-      opportunityTitle: 'Aberto a Oportunidades Júnior',
+      opportunityTitle: 'Aberto a Oportunidades',
       opportunityText: 'Desenvolvimento de software & cibersegurança',
     },
     work: {
@@ -253,7 +253,9 @@ function App() {
     <div className='site-shell'>
       <header className='nav-wrap'>
         <nav className='nav container'>
-          <a className='brand' href='#top' aria-label={t.nav.top}>AR</a>
+          <a className='brand' href='#top' aria-label={t.nav.top}>
+            <img src='/bloub-teste.gif' alt='Andrey Rodrigues' />
+          </a>
 
           <div className='nav-right'>
             <div className='nav-links'>
