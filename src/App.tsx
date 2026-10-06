@@ -1,54 +1,54 @@
-import { ArrowUpRight, BookOpen, ExternalLink, Github, Linkedin, Mail, ShieldCheck } from 'lucide-react'
+import {
+  ArrowUpRight,
+  BookOpen,
+  BrainCircuit,
+  Code2,
+  ExternalLink,
+  Github,
+  GraduationCap,
+  Linkedin,
+  Mail,
+  ServerCog,
+  ShieldCheck,
+} from 'lucide-react'
 
-type Project = {
-  title: string
-  description: string
-  tags: string[]
-  github?: string
-  demo?: string
-  note?: string
-}
+const profileImage = 'https://avatars.githubusercontent.com/u/134998417?v=4'
 
-const projects: Project[] = [
-  {
-    title: 'AniCard Battle',
-    description: 'Collectible card game built with Flutter and Firebase, featuring authentication, persistent progression, deck management, battles, rankings, missions and rewards.',
-    tags: ['Flutter', 'Dart', 'Firebase Auth', 'Cloud Firestore'],
-    github: 'https://github.com/AndreyRodr/AnicardBattle',
-    demo: 'https://anicard-battle.web.app',
-    note: 'Live',
-  },
-  {
-    title: 'Aegis',
-    description: 'Cybersecurity research project combining Wazuh SIEM and Isolation Forest to detect anomalies and web threats using server logs.',
-    tags: ['Python', 'Wazuh', 'Docker', 'Elasticsearch', 'Machine Learning'],
-    github: 'https://github.com/AndreyRodr/Aegis-Projeto-IC',
-  },
+const secondaryProjects = [
   {
     title: 'Cook & Tea',
-    description: 'Full stack recipe-sharing platform with authentication, route protection, REST APIs and user-generated content.',
-    tags: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'JWT'],
+    eyebrow: 'Full Stack Web',
+    description:
+      'Recipe-sharing platform with role-based user flows, REST APIs, JWT authentication, PostgreSQL persistence and cloud image storage.',
+    tags: ['React', 'Node.js', 'Express', 'PostgreSQL', 'JWT', 'AWS S3'],
     github: 'https://github.com/AndreyRodr/Cook-and-Tea',
   },
   {
     title: 'HandTracker',
-    description: 'LIBRAS recognition project using computer vision and deep learning for static and dynamic gesture classification.',
-    tags: ['Python', 'OpenCV', 'MediaPipe', 'TensorFlow', 'LSTM'],
+    eyebrow: 'AI & Computer Vision',
+    description:
+      'LIBRAS recognition project combining static image classification and dynamic gesture recognition with computer vision and deep learning.',
+    tags: ['Python', 'OpenCV', 'MediaPipe', 'TensorFlow', 'MobileNetV2', 'LSTM'],
     github: 'https://github.com/AndreyRodr/HandTracker',
-  },
-  {
-    title: 'TCG CardManager',
-    description: 'Card catalog manager focused on CRUD, authentication, filtering, uploads and backend security practices.',
-    tags: ['PHP', 'MySQL', 'PDO', 'CSRF', 'Vanilla JS'],
-    github: 'https://github.com/AndreyRodr/TCG-CardManager',
   },
 ]
 
-const groups = [
-  { title: 'Software', items: ['React', 'TypeScript', 'Node.js', 'Flutter'] },
-  { title: 'Backend & Data', items: ['Python', 'SQL', 'PostgreSQL', 'Firebase'] },
-  { title: 'Cybersecurity', items: ['Wazuh', 'Docker', 'ELK', 'Nginx'] },
-  { title: 'AI & Data', items: ['Pandas', 'Scikit-learn', 'TensorFlow', 'OpenCV'] },
+const skillGroups = [
+  {
+    title: 'Software Engineering',
+    icon: Code2,
+    items: ['React', 'TypeScript', 'Node.js', 'Express', 'Flutter', 'REST APIs'],
+  },
+  {
+    title: 'Cybersecurity & Infrastructure',
+    icon: ShieldCheck,
+    items: ['Wazuh', 'Docker', 'Elasticsearch', 'Logstash', 'Nginx', 'Linux'],
+  },
+  {
+    title: 'Data & Applied AI',
+    icon: BrainCircuit,
+    items: ['Python', 'Pandas', 'Scikit-learn', 'TensorFlow', 'OpenCV', 'MediaPipe'],
+  },
 ]
 
 function App() {
@@ -57,9 +57,11 @@ function App() {
       <header className='nav-wrap'>
         <nav className='nav container'>
           <a className='brand' href='#top' aria-label='Back to top'>AR</a>
+
           <div className='nav-links'>
-            <a href='#projects'>Projects</a>
+            <a href='#work'>Work</a>
             <a href='#research'>Research</a>
+            <a href='#about'>About</a>
             <a href='#contact'>Contact</a>
           </div>
         </nav>
@@ -68,80 +70,193 @@ function App() {
       <main id='top'>
         <section className='hero container'>
           <div className='hero-copy'>
-            <span className='eyebrow'>Software • Cybersecurity • Applied AI</span>
-            <h1>Hi, I&apos;m <span>Andrey Rodrigues.</span></h1>
-            <p className='hero-role'>Software Developer & Cybersecurity Researcher</p>
-            <p className='hero-text'>I build software and explore security through research, data and machine learning. Currently finishing my degree in Systems Analysis and Development at IFSP.</p>
+            <span className='eyebrow'>Software Development • Cybersecurity • Applied AI</span>
+            <h1>
+              Andrey Rodrigues
+              <span>Software Developer & Cybersecurity Researcher.</span>
+            </h1>
+            <p className='hero-text'>
+              I build software and investigate security problems through research, data and machine learning.
+              I am currently finishing my degree in Systems Analysis and Development at IFSP.
+            </p>
+
             <div className='hero-actions'>
-              <a className='button primary' href='#projects'>View Projects <ArrowUpRight size={17} /></a>
-              <a className='button ghost' href='https://github.com/AndreyRodr' target='_blank' rel='noreferrer'><Github size={17} /> GitHub</a>
-              <a className='button ghost' href='https://www.linkedin.com/in/andreyrodrigues-dev' target='_blank' rel='noreferrer'><Linkedin size={17} /> LinkedIn</a>
+              <a className='button primary' href='#work'>
+                View my work <ArrowUpRight size={17} />
+              </a>
+              <a className='button ghost' href='https://github.com/AndreyRodr' target='_blank' rel='noreferrer'>
+                <Github size={17} /> GitHub
+              </a>
+              <a className='button ghost' href='https://www.linkedin.com/in/andreyrodrigues-dev' target='_blank' rel='noreferrer'>
+                <Linkedin size={17} /> LinkedIn
+              </a>
             </div>
           </div>
 
-          <aside className='status-card'>
-            <div className='status-icon'><ShieldCheck size={24} /></div>
-            <p className='status-label'>Currently</p>
-            <div className='status-list'>
-              <div><strong>ADS — IFSP</strong><span>Final semester</span></div>
-              <div><strong>Aegis</strong><span>Scientific research in cybersecurity</span></div>
-              <div><strong>RECIMA21</strong><span>Published research, 2026</span></div>
+          <aside className='portrait-wrap' aria-label='Profile photo'>
+            <div className='portrait-glow' />
+            <div className='portrait-card'>
+              <img src={profileImage} alt='Andrey Rodrigues' className='portrait-image' />
+              <div className='portrait-meta'>
+                <div>
+                  <strong>Andrey Rodrigues</strong>
+                  <span>São José dos Campos, SP</span>
+                </div>
+                <a href='https://github.com/AndreyRodr' target='_blank' rel='noreferrer' aria-label='GitHub profile'>
+                  <Github size={19} />
+                </a>
+              </div>
             </div>
           </aside>
         </section>
 
-        <section className='section container' id='projects'>
-          <div className='section-heading'>
-            <div><span className='eyebrow'>Selected work</span><h2>Projects</h2></div>
-            <p>Projects that combine software engineering, cybersecurity, data and applied machine learning.</p>
+        <section className='quick-facts'>
+          <div className='container facts-grid'>
+            <div className='fact'>
+              <GraduationCap size={18} />
+              <div><strong>ADS @ IFSP</strong><span>Final semester</span></div>
+            </div>
+            <div className='fact'>
+              <ShieldCheck size={18} />
+              <div><strong>Cybersecurity Research</strong><span>Aegis scientific initiation</span></div>
+            </div>
+            <div className='fact'>
+              <ServerCog size={18} />
+              <div><strong>Open to Junior Opportunities</strong><span>Software development & cybersecurity</span></div>
+            </div>
           </div>
-          <div className='project-grid'>
-            {projects.map((project, index) => (
-              <article className={`project-card ${index === 0 ? 'featured' : ''}`} key={project.title}>
-                <div className='project-topline'>
-                  <span className='project-number'>0{index + 1}</span>
-                  {project.note && <span className='live-badge'>{project.note}</span>}
-                </div>
+        </section>
+
+        <section className='section container' id='work'>
+          <div className='section-heading'>
+            <div>
+              <span className='eyebrow'>Featured work</span>
+              <h2>Projects with depth.</h2>
+            </div>
+            <p>
+              A smaller selection of projects that best represents how I work across security, software engineering and applied AI.
+            </p>
+          </div>
+
+          <div className='featured-grid'>
+            <article className='feature-card aegis-card'>
+              <div className='feature-card-top'>
+                <span className='project-kicker'>Cybersecurity + Machine Learning</span>
+                <ShieldCheck size={24} />
+              </div>
+              <div className='feature-copy'>
+                <h3>Aegis</h3>
+                <p>
+                  Hybrid threat-detection architecture combining Wazuh SIEM with Isolation Forest to correlate rule-based alerts and anomalous web traffic.
+                </p>
+              </div>
+              <div className='metrics-row'>
+                <div><strong>73.86%</strong><span>F1-Score</span></div>
+                <div><strong>70.27%</strong><span>Precision</span></div>
+                <div><strong>35,190 → 718</strong><span>False positives</span></div>
+              </div>
+              <div className='feature-links'>
+                <a href='https://github.com/AndreyRodr/Aegis-Projeto-IC' target='_blank' rel='noreferrer'>
+                  GitHub <Github size={15} />
+                </a>
+                <a href='https://doi.org/10.47820/recima21.v7i8.8820' target='_blank' rel='noreferrer'>
+                  Published article <ExternalLink size={15} />
+                </a>
+              </div>
+            </article>
+
+            <article className='feature-card anicard-card'>
+              <div className='feature-card-top'>
+                <span className='project-kicker'>Flutter + Firebase</span>
+                <span className='live-badge'>Live</span>
+              </div>
+              <div className='feature-copy'>
+                <h3>AniCard Battle</h3>
+                <p>
+                  Collectible card game with authentication, deck building, battles, rankings, missions, rewards and persistent player progression.
+                </p>
+              </div>
+              <div className='stack-line'>
+                <span>Flutter</span><span>Dart</span><span>Firebase Auth</span><span>Cloud Firestore</span>
+              </div>
+              <div className='feature-links'>
+                <a className='live-link' href='https://anicard-battle.web.app' target='_blank' rel='noreferrer'>
+                  Live Demo <ExternalLink size={15} />
+                </a>
+                <a href='https://github.com/AndreyRodr/AnicardBattle' target='_blank' rel='noreferrer'>
+                  GitHub <Github size={15} />
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div className='selected-heading'>
+            <span className='eyebrow'>Selected projects</span>
+            <h3>More of my work</h3>
+          </div>
+
+          <div className='selected-grid'>
+            {secondaryProjects.map((project) => (
+              <article className='selected-card' key={project.title}>
+                <span className='project-kicker'>{project.eyebrow}</span>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-                <div className='tag-list'>{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-                <div className='project-links'>
-                  {project.demo && <a href={project.demo} target='_blank' rel='noreferrer'>Live Demo <ExternalLink size={15} /></a>}
-                  {project.github && <a href={project.github} target='_blank' rel='noreferrer'>GitHub <Github size={15} /></a>}
+                <div className='tag-list'>
+                  {project.tags.map((tag) => <span key={tag}>{tag}</span>)}
                 </div>
+                <a className='project-link' href={project.github} target='_blank' rel='noreferrer'>
+                  View on GitHub <ArrowUpRight size={15} />
+                </a>
               </article>
             ))}
           </div>
         </section>
 
-        <section className='section container split-section' id='research'>
-          <div>
-            <span className='eyebrow'>Research</span>
-            <h2>Aegis</h2>
-            <p className='large-copy'>A hybrid threat-detection architecture combining a SIEM with unsupervised machine learning for anomaly detection in web traffic.</p>
-            <div className='metric-grid'>
-              <div><strong>99.30%</strong><span>Accuracy</span></div>
-              <div><strong>73.86%</strong><span>F1-Score</span></div>
-              <div><strong>170,366</strong><span>Requests evaluated</span></div>
+        <section className='research-section' id='research'>
+          <div className='container research-layout'>
+            <div className='research-intro'>
+              <span className='eyebrow'>Published research</span>
+              <h2>Security research with measurable results.</h2>
+              <p>
+                My scientific initiation at IFSP investigates a hybrid architecture for web threat detection using server logs, SIEM correlation and unsupervised machine learning.
+              </p>
             </div>
-          </div>
-          <div className='research-card'>
-            <BookOpen size={26} />
-            <p className='research-kicker'>Published in RECIMA21 • 2026</p>
-            <h3>Predictive Analysis of Vulnerabilities in Web Applications Using Server Logs</h3>
-            <p>Presented at ERMAC Regional 8 at INPE, São José dos Campos, with external validation using CIC-IDS2017.</p>
-            <a href='https://doi.org/10.47820/recima21.v7i8.8820' target='_blank' rel='noreferrer'>Read publication <ExternalLink size={15} /></a>
+
+            <article className='publication-card'>
+              <BookOpen size={25} />
+              <div className='publication-meta'>RECIMA21 • 2026</div>
+              <h3>Predictive Analysis of Vulnerabilities in Web Applications Using Server Logs: A Hybrid Architecture</h3>
+              <p>
+                Validated on 170,366 CIC-IDS2017 requests and presented at ERMAC Regional 8 at INPE, São José dos Campos.
+              </p>
+              <div className='publication-footer'>
+                <span>ERMAC Regional 8 • INPE</span>
+                <a href='https://doi.org/10.47820/recima21.v7i8.8820' target='_blank' rel='noreferrer'>
+                  Read publication <ExternalLink size={15} />
+                </a>
+              </div>
+            </article>
           </div>
         </section>
 
-        <section className='section container'>
-          <div className='section-heading'><div><span className='eyebrow'>Technical toolkit</span><h2>Skills</h2></div></div>
-          <div className='skill-grid'>
-            {groups.map((group) => (
-              <div className='skill-card' key={group.title}>
-                <h3>{group.title}</h3>
-                <div className='skill-items'>{group.items.map((item) => <span key={item}>{item}</span>)}</div>
-              </div>
+        <section className='section container about-section' id='about'>
+          <div className='about-copy'>
+            <span className='eyebrow'>About me</span>
+            <h2>Building software with a security mindset.</h2>
+            <p>
+              I am a Systems Analysis and Development student at IFSP with experience across web and mobile development, data, machine learning and cybersecurity research.
+            </p>
+            <p>
+              I enjoy projects where software engineering meets real-world constraints: authentication, infrastructure, data quality, security controls and measurable outcomes.
+            </p>
+          </div>
+
+          <div className='skills-stack'>
+            {skillGroups.map(({ title, icon: Icon, items }) => (
+              <article className='skill-group' key={title}>
+                <div className='skill-heading'><Icon size={19} /><h3>{title}</h3></div>
+                <div className='skill-items'>{items.map((item) => <span key={item}>{item}</span>)}</div>
+              </article>
             ))}
           </div>
         </section>
@@ -151,7 +266,7 @@ function App() {
             <div>
               <span className='eyebrow'>Get in touch</span>
               <h2>Let&apos;s build something useful.</h2>
-              <p>I&apos;m interested in junior software development and cybersecurity opportunities.</p>
+              <p>I&apos;m interested in junior opportunities in software development and cybersecurity.</p>
             </div>
             <div className='contact-links'>
               <a href='mailto:andreyrm.dev@gmail.com'><Mail size={18} /> andreyrm.dev@gmail.com</a>
