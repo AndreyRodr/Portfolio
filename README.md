@@ -1,18 +1,20 @@
 # Andrey Rodrigues — Portfolio
 
-Personal portfolio built with **React, TypeScript and Vite**, focused on presenting selected software development, cybersecurity and applied AI projects.
+Personal portfolio built with **React, TypeScript and Vite**, focused on a curated selection of software development, cybersecurity and applied AI work.
 
 ## Live Site
 
 🌐 **https://andreyrodrigues-portfolio.vercel.app**
 
-## Highlights
+## Featured Work
 
+- **Aegis** — Cybersecurity research combining Wazuh SIEM and Isolation Forest, with published results and external validation
 - **AniCard Battle** — Flutter + Firebase collectible card game with a live web demo
-- **Aegis** — Cybersecurity research combining Wazuh SIEM and Isolation Forest
+
+## Selected Projects
+
 - **Cook & Tea** — Full stack recipe-sharing platform
 - **HandTracker** — Computer vision and deep learning for LIBRAS recognition
-- **TCG CardManager** — PHP/MySQL card catalog with authentication and security controls
 
 ## Stack
 
