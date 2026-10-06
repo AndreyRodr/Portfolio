@@ -785,3 +785,40 @@ img { display: block; max-width: 100%; }
   .selected-visual { height: 140px; }
   .aegis-visual i { width: 12px; }
 }
+
+
+.project-heading-meta {
+  display: grid;
+  gap: 7px;
+}
+.project-context {
+  color: #7f8ca2;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+.selected-context {
+  display: block;
+  margin-top: 8px;
+}
+.publication-authors {
+  margin-top: 10px;
+  color: #9aa8bc;
+  font-size: .84rem;
+}
+.spoken-languages {
+  display: grid;
+  gap: 7px;
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+.spoken-languages strong {
+  font-size: .84rem;
+  color: #d7e0ee;
+}
+.spoken-languages span {
+  color: var(--muted);
+  font-size: .88rem;
+  line-height: 1.6;
+}
