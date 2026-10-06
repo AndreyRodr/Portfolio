@@ -77,6 +77,8 @@ const copy = {
       handKicker: 'AI & Computer Vision',
       handDescription:
         'LIBRAS recognition project combining static image classification and dynamic gesture recognition with computer vision and deep learning.',
+      scientificInitiation: 'Scientific Initiation @ IFSP',
+      teamProject: 'Team Project',
     },
     research: {
       eyebrow: 'Published research',
@@ -84,10 +86,11 @@ const copy = {
       intro:
         'My scientific initiation at IFSP investigates a hybrid architecture for web threat detection using server logs, SIEM correlation and unsupervised machine learning.',
       publicationTitle:
-        'Predictive Analysis of Vulnerabilities in Web Applications Using Server Logs: A Hybrid Architecture',
+        'Análise Preditiva de Vulnerabilidades em Aplicações Web Usando Logs de Servidor: Uma Arquitetura Híbrida',
       publicationText:
         'Validated on 170,366 CIC-IDS2017 requests and presented at ERMAC Regional 8 at INPE, São José dos Campos.',
       read: 'Read publication',
+      authors: 'Andrey Rodrigues Moreira · Olavo Olimpio de Matos Junior',
     },
     experience: {
       eyebrow: 'Experience & education',
@@ -102,6 +105,11 @@ const copy = {
       degreeOrg: 'IFSP — Jacareí Campus',
       degreeText:
         'Technology degree focused on software development, databases, web systems, security, data and software engineering.',
+      volunteerPeriod: 'Sep 2024 — Present',
+      volunteerTitle: 'Director of Events — Volunteer',
+      volunteerOrg: 'Associação Atlética Acadêmica Maiara Barreto',
+      volunteerText:
+        'Planning and coordination of sports and social events, including schedules, budgets, suppliers, negotiation and volunteer team leadership.',
     },
     about: {
       eyebrow: 'About me',
@@ -115,6 +123,8 @@ const copy = {
       backend: 'Backend & Databases',
       cyber: 'Cybersecurity & Infrastructure',
       data: 'Data & Applied AI',
+      spokenLanguages: 'Languages',
+      spokenLanguagesText: 'Portuguese · Native  /  English · Intermediate–Advanced  /  Spanish · Basic',
     },
     contact: {
       eyebrow: 'Get in touch',
@@ -180,6 +190,8 @@ const copy = {
       handKicker: 'IA & Visão Computacional',
       handDescription:
         'Projeto de reconhecimento de LIBRAS que combina classificação de imagens estáticas e reconhecimento de gestos dinâmicos com visão computacional e deep learning.',
+      scientificInitiation: 'Iniciação Científica @ IFSP',
+      teamProject: 'Projeto em Equipe',
     },
     research: {
       eyebrow: 'Pesquisa publicada',
@@ -191,6 +203,7 @@ const copy = {
       publicationText:
         'Validado em 170.366 requisições do CIC-IDS2017 e apresentado no ERMAC Regional 8, no INPE, em São José dos Campos.',
       read: 'Ler publicação',
+      authors: 'Andrey Rodrigues Moreira · Olavo Olimpio de Matos Junior',
     },
     experience: {
       eyebrow: 'Experiência & formação',
@@ -205,6 +218,11 @@ const copy = {
       degreeOrg: 'IFSP — Câmpus Jacareí',
       degreeText:
         'Curso superior de tecnologia com foco em desenvolvimento de software, bancos de dados, sistemas web, segurança, dados e engenharia de software.',
+      volunteerPeriod: 'Set 2024 — Atual',
+      volunteerTitle: 'Diretor de Eventos — Voluntariado',
+      volunteerOrg: 'Associação Atlética Acadêmica Maiara Barreto',
+      volunteerText:
+        'Planejamento e coordenação de eventos esportivos e sociais, incluindo cronogramas, orçamentos, fornecedores, negociação e liderança de equipes voluntárias.',
     },
     about: {
       eyebrow: 'Sobre mim',
@@ -218,6 +236,8 @@ const copy = {
       backend: 'Backend & Bancos de Dados',
       cyber: 'Cibersegurança & Infraestrutura',
       data: 'Dados & IA Aplicada',
+      spokenLanguages: 'Idiomas',
+      spokenLanguagesText: 'Português · Nativo  /  Inglês · Intermediário-avançado  /  Espanhol · Básico',
     },
     contact: {
       eyebrow: 'Entre em contato',
@@ -234,7 +254,7 @@ const copy = {
 const skills = {
   languages: {
     icon: Code2,
-    items: ['Java', 'JavaScript', 'TypeScript', 'Python', 'PHP', 'Dart', 'SQL'],
+    items: ['JavaScript', 'TypeScript', 'Python', 'PHP', 'Dart', 'SQL'],
   },
   webMobile: {
     icon: Code2,
@@ -317,6 +337,7 @@ function App() {
       title: 'Cook & Tea',
       eyebrow: t.work.cookKicker,
       description: t.work.cookDescription,
+      context: t.work.teamProject,
       tags: ['React', 'Node.js', 'Express', 'PostgreSQL', 'JWT', 'AWS S3'],
       github: 'https://github.com/AndreyRodr/Cook-and-Tea',
       visual: cookVisual,
@@ -326,6 +347,7 @@ function App() {
       title: 'HandTracker',
       eyebrow: t.work.handKicker,
       description: t.work.handDescription,
+      context: t.work.teamProject,
       tags: ['Python', 'OpenCV', 'MediaPipe', 'TensorFlow', 'MobileNetV2', 'LSTM'],
       github: 'https://github.com/AndreyRodr/HandTracker',
       visual: handVisual,
@@ -451,7 +473,10 @@ function App() {
           <div className='featured-grid'>
             <article className='feature-card aegis-card reveal'>
               <div className='feature-card-top'>
-                <span className='project-kicker'>{t.work.aegisKicker}</span>
+                <div className='project-heading-meta'>
+                  <span className='project-kicker'>{t.work.aegisKicker}</span>
+                  <span className='project-context'>{t.work.scientificInitiation}</span>
+                </div>
                 <ShieldCheck size={24} />
               </div>
 
@@ -486,7 +511,10 @@ function App() {
 
             <article className='feature-card anicard-card reveal'>
               <div className='feature-card-top'>
-                <span className='project-kicker'>Flutter + Firebase</span>
+                <div className='project-heading-meta'>
+                  <span className='project-kicker'>Flutter + Firebase</span>
+                  <span className='project-context'>{t.work.teamProject}</span>
+                </div>
                 <span className='live-badge'>{t.work.live}</span>
               </div>
 
@@ -524,6 +552,7 @@ function App() {
                   <img src={project.visual} alt={project.title} />
                 </div>
                 <span className='project-kicker'>{project.eyebrow}</span>
+                <span className='project-context selected-context'>{project.context}</span>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 <div className='tag-list'>
@@ -549,6 +578,7 @@ function App() {
               <BookOpen size={25} />
               <div className='publication-meta'>RECIMA21 • 2026</div>
               <h3>{t.research.publicationTitle}</h3>
+              <div className='publication-authors'>{t.research.authors}</div>
               <p>{t.research.publicationText}</p>
               <div className='publication-footer'>
                 <span>ERMAC Regional 8 • INPE</span>
@@ -578,6 +608,16 @@ function App() {
             </article>
 
             <article className='timeline-item reveal'>
+              <div className='timeline-marker'><BriefcaseBusiness size={18} /></div>
+              <div className='timeline-period'>{t.experience.volunteerPeriod}</div>
+              <div className='timeline-content'>
+                <h3>{t.experience.volunteerTitle}</h3>
+                <strong>{t.experience.volunteerOrg}</strong>
+                <p>{t.experience.volunteerText}</p>
+              </div>
+            </article>
+
+            <article className='timeline-item reveal'>
               <div className='timeline-marker'><GraduationCap size={18} /></div>
               <div className='timeline-period'>{t.experience.degreePeriod}</div>
               <div className='timeline-content'>
@@ -595,6 +635,10 @@ function App() {
             <h2>{t.about.title}</h2>
             <p>{t.about.p1}</p>
             <p>{t.about.p2}</p>
+            <div className='spoken-languages'>
+              <strong>{t.about.spokenLanguages}</strong>
+              <span>{t.about.spokenLanguagesText}</span>
+            </div>
           </div>
 
           <div className='skills-stack reveal'>
