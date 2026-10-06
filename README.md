@@ -4,7 +4,7 @@ Personal portfolio built with **React, TypeScript and Vite**, focused on a curat
 
 ## Live Site
 
-🌐 **https://andreyrodrigues-portfolio.vercel.app**
+🌐 **https://andreyrm-dev.vercel.app**
 
 ## Featured Work
 
@@ -39,7 +39,7 @@ npm run build
 
 ## Contact
 
-- Portfolio: https://andreyrodrigues-portfolio.vercel.app
+- Portfolio: https://andreyrm-dev.vercel.app
 - GitHub: https://github.com/AndreyRodr
 - LinkedIn: https://www.linkedin.com/in/andreyrodrigues-dev
 - Email: andreyrm.dev@gmail.com
