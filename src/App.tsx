@@ -110,7 +110,9 @@ const copy = {
         'I am a Systems Analysis and Development student at IFSP with experience across web and mobile development, data, machine learning and cybersecurity research.',
       p2:
         'I enjoy projects where software engineering meets real-world constraints: authentication, infrastructure, data quality, security controls and measurable outcomes.',
-      software: 'Software Engineering',
+      languages: 'Languages & Core',
+      webMobile: 'Frontend & Mobile',
+      backend: 'Backend & Databases',
       cyber: 'Cybersecurity & Infrastructure',
       data: 'Data & Applied AI',
     },
@@ -211,7 +213,9 @@ const copy = {
         'Sou estudante de Análise e Desenvolvimento de Sistemas no IFSP, com experiência em desenvolvimento web e mobile, dados, machine learning e pesquisa em cibersegurança.',
       p2:
         'Gosto de projetos em que engenharia de software encontra restrições do mundo real: autenticação, infraestrutura, qualidade de dados, controles de segurança e resultados mensuráveis.',
-      software: 'Engenharia de Software',
+      languages: 'Linguagens & Core',
+      webMobile: 'Frontend & Mobile',
+      backend: 'Backend & Bancos de Dados',
       cyber: 'Cibersegurança & Infraestrutura',
       data: 'Dados & IA Aplicada',
     },
@@ -228,17 +232,25 @@ const copy = {
 } as const
 
 const skills = {
-  software: {
+  languages: {
     icon: Code2,
-    items: ['React', 'TypeScript', 'Node.js', 'Express', 'Flutter', 'REST APIs'],
+    items: ['Java', 'JavaScript', 'TypeScript', 'Python', 'PHP', 'Dart', 'SQL'],
+  },
+  webMobile: {
+    icon: Code2,
+    items: ['React', 'Flutter', 'HTML5', 'CSS3', 'Tailwind CSS', 'Vite'],
+  },
+  backend: {
+    icon: ServerCog,
+    items: ['Node.js', 'Express', 'REST APIs', 'PostgreSQL', 'MySQL', 'Firebase / Firestore', 'Prisma', 'PDO', 'JWT'],
   },
   cyber: {
     icon: ShieldCheck,
-    items: ['Wazuh', 'Docker', 'Elasticsearch', 'Logstash', 'Nginx', 'Linux'],
+    items: ['Wazuh', 'Docker', 'Elasticsearch', 'Logstash', 'Nginx', 'Git / GitHub'],
   },
   data: {
     icon: BrainCircuit,
-    items: ['Python', 'Pandas', 'Scikit-learn', 'TensorFlow', 'OpenCV', 'MediaPipe'],
+    items: ['Pandas', 'Scikit-learn', 'TensorFlow / Keras', 'OpenCV', 'MediaPipe', 'Isolation Forest'],
   },
 }
 
@@ -322,7 +334,9 @@ function App() {
   ]
 
   const skillGroups = [
-    { title: t.about.software, ...skills.software },
+    { title: t.about.languages, ...skills.languages },
+    { title: t.about.webMobile, ...skills.webMobile },
+    { title: t.about.backend, ...skills.backend },
     { title: t.about.cyber, ...skills.cyber },
     { title: t.about.data, ...skills.data },
   ]
