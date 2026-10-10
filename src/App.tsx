@@ -373,33 +373,31 @@ function App() {
             <img src='/bloub-teste.gif' alt='Andrey Rodrigues' />
           </a>
 
-          <div className='nav-right'>
-            <div className='nav-links'>
-              <a className={navClass('work')} href='#work'>{t.nav.work}</a>
-              <a className={navClass('research')} href='#research'>{t.nav.research}</a>
-              <a className={navClass('about')} href='#about'>{t.nav.about}</a>
-              <a className={navClass('contact')} href='#contact'>{t.nav.contact}</a>
-            </div>
+          <div className='nav-links'>
+            <a className={navClass('work')} href='#work'>{t.nav.work}</a>
+            <a className={navClass('research')} href='#research'>{t.nav.research}</a>
+            <a className={navClass('about')} href='#about'>{t.nav.about}</a>
+            <a className={navClass('contact')} href='#contact'>{t.nav.contact}</a>
+          </div>
 
-            <div className='language-switch' aria-label={t.nav.language}>
-              <button
-                type='button'
-                className={language === 'pt' ? 'active' : ''}
-                onClick={() => setLanguage('pt')}
-                aria-pressed={language === 'pt'}
-              >
-                PT
-              </button>
-              <span aria-hidden='true'>/</span>
-              <button
-                type='button'
-                className={language === 'en' ? 'active' : ''}
-                onClick={() => setLanguage('en')}
-                aria-pressed={language === 'en'}
-              >
-                EN
-              </button>
-            </div>
+          <div className='language-switch' aria-label={t.nav.language}>
+            <button
+              type='button'
+              className={language === 'pt' ? 'active' : ''}
+              onClick={() => setLanguage('pt')}
+              aria-pressed={language === 'pt'}
+            >
+              PT
+            </button>
+            <span aria-hidden='true'>/</span>
+            <button
+              type='button'
+              className={language === 'en' ? 'active' : ''}
+              onClick={() => setLanguage('en')}
+              aria-pressed={language === 'en'}
+            >
+              EN
+            </button>
           </div>
         </nav>
       </header>
